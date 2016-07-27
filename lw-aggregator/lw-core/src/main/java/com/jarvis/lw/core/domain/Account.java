@@ -1,4 +1,4 @@
-package com.jarvis.lw.domain;
+package com.jarvis.lw.core.domain;
 
 import java.io.Serializable;
 
