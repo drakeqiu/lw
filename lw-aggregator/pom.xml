@@ -20,5 +20,7 @@
 		<module>lw-utils</module>
 		<module>lw-web</module>
 		<module>lw-domain</module>
+        <module>lw-persistence</module>
+    <module>lw-core</module>
   </modules>
 </project>
