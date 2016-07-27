@@ -1,8 +1,10 @@
 package com.jarvis.lw.core.service.base;
 
+import com.jarvis.lw.core.constant.BaseConstant;
+
 public interface BaseService<T> {
-	public BaseConstant.BaseStatus save(T object);
-	public BaseConstant.BaseStatus delete(long id);
-	public BaseConstant.BaseStatus update(T object);
+	public BaseConstant save(T object);
+	public BaseConstant delete(long id);
+	public BaseConstant update(T object);
 	public T findById(long id);
 }

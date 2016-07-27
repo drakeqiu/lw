@@ -1,8 +1,8 @@
 package com.jarvis.lw.core.service.base;
 
-import com.jarvis.lw.core.service.base.BaseConstant.BaseStatus;
+import com.jarvis.lw.core.constant.BaseStatus;
 
-public class BaseServiceImpl<T> implements BaseService<T> {
+public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
 	public BaseStatus save(T object) {
 		return null;
