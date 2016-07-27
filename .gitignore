@@ -8,85 +8,85 @@ target/
 #/web-app/WEB-INF
  
 # IDE support files
- /.classpath
- /.launch
- /.project
- /.settings
- /*.launch
- /*.tmproj
- /ivy*
- /eclipse
+/.classpath
+/.launch
+/.project
+/.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
   
 # default HSQL database files for production mode
-  /prodDb.*
+/prodDb.*
    
 # general HSQL database files
-   *Db.properties
-   *Db.script
+*Db.properties
+*Db.script
     
 # logs
-    /stacktrace.log
-    /test/reports
-    /logs
-    *.log
-    *.log.*
+/stacktrace.log
+/test/reports
+/logs
+*.log
+*.log.*
      
 # project release file
-     /*.war
+/*.war
       
 # plugin release file
-      /*.zip
-      /*.zip.sha1
+/*.zip
+/*.zip.sha1
        
 # older plugin install locations
-       /plugins
-       /web-app/plugins
-       /web-app/WEB-INF/classes
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
         
 # "temporary" build files
-        target/
-        out/
-        build/
+target/
+out/
+build/
          
 # other
-         *.iws
+*.iws
           
 #.gitignore for java
           *.class
            
 # Package Files #
-           *.jar
-           *.war
-           *.ear
+*.jar
+*.war
+*.ear
             
 ## .gitignore for eclipse
              
-             *.pydevproject
-             .project
-             .metadata
-             bin/**
-             tmp/**
-             tmp/**/*
-             *.tmp
-             *.bak
-             *.swp
-             *~.nib
-             local.properties
-             .classpath
-             .settings/
-             .loadpath
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
               
 # External tool builders
-              .externalToolBuilders/
+.externalToolBuilders/
                
 # Locally stored "Eclipse launch configurations"
-               *.launch
+*.launch
                 
 # CDT-specific
-                .cproject
+.cproject
                  
 # PDT-specific
-                 .buildpath
+.buildpath
                   
 ## .gitignore for intellij
                    
