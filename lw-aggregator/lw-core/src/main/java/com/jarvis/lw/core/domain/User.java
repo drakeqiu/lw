@@ -58,4 +58,10 @@ public class User implements Serializable {
 		this.description = description;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", cell=" + cell + ", address=" + address + ", birthday="
+				+ birthday + ", description=" + description + "]";
+	}
+
 }
