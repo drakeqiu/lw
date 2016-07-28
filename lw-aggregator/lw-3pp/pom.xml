@@ -8,22 +8,13 @@
     <version>1.0-SNAPSHOT</version>
     <relativePath>../lw-parent</relativePath>
   </parent>
-  <artifactId>lw-persistence</artifactId>
-  <name>lw-persistence</name>
+  <artifactId>lw-3pp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>lw-3pp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-    <dependency>
-    	<groupId>com.jarvis</groupId>
-    	<artifactId>lw-core</artifactId>
-    	<scope>provided</scope>
-    </dependency>
-    
-    <dependency>
-    	<groupId>org.springframework</groupId>
-    	<artifactId>spring-jdbc</artifactId>
-    </dependency>
   </dependencies>
 </project>

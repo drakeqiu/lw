@@ -1,13 +1,14 @@
 package com.jarvis.lw.core.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Account implements Serializable {
 	private Long id;
 	private String username;
 	private String password;
 	private Boolean isActivated;
-	private Long modifyDate;
+	private Long modifiedDate;
 
 	public Long getId() {
 		return id;
@@ -42,11 +43,15 @@ public class Account implements Serializable {
 	}
 
 	public Long getModifyDate() {
-		return modifyDate;
+		return modifiedDate;
 	}
 
 	public void setModifyDate(Long modifyDate) {
-		this.modifyDate = modifyDate;
+		this.modifiedDate = modifyDate;
+	}
+	
+	public void setModifiedDate(Date modifiedDate) {
+		this.modifiedDate = Long.valueOf(modifiedDate.getTime());
 	}
 
 }

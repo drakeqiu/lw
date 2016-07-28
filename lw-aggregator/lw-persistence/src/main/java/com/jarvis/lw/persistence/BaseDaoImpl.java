@@ -1,5 +1,7 @@
 package com.jarvis.lw.persistence;
 
-public class BaseDaoImpl<T> implements IBaseDao<T> {
-	
+import javax.sql.DataSource;
+
+public abstract class BaseDaoImpl<T> implements IBaseDao<T> {
+	protected DataSource dataSource;
 }

@@ -1,6 +1,7 @@
 package com.jarvis.lw.core.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
 	private Long id;
@@ -48,6 +49,10 @@ public class User implements Serializable {
 
 	public void setBirthday(Long birthday) {
 		this.birthday = birthday;
+	}
+	
+	public void setBirthday(Date birthday) {
+		this.birthday = Long.valueOf(birthday.getTime());
 	}
 
 	public String getDescription() {
