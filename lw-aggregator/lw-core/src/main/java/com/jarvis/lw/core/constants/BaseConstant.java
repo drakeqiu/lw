@@ -1,4 +1,4 @@
-package com.jarvis.lw.core.constant;
+package com.jarvis.lw.core.constants;
 
 import java.io.Serializable;
 

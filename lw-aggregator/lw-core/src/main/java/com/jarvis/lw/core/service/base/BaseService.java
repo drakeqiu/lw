@@ -1,6 +1,6 @@
 package com.jarvis.lw.core.service.base;
 
-import com.jarvis.lw.core.constant.BaseConstant;
+import com.jarvis.lw.core.constants.BaseConstant;
 
 public interface BaseService<T> {
 	public BaseConstant save(T object);
