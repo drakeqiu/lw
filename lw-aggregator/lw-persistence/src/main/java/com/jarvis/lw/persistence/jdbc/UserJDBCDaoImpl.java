@@ -9,18 +9,19 @@ import com.jarvis.lw.core.constants.BaseStatus;
 import com.jarvis.lw.core.domain.User;
 import com.jarvis.lw.persistence.IUserDao;
 
-
-
 public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IUserDao {
 	private static final String TABLENAME = "t_user";
-	
-	public BaseConstant save(User user) {
-		String sql = "insert into t_user";
-		
+
+	public void save(User user) {
+		String sql = "insert into t_user(name,age,cell,address,birthday,description) values (?,?,?,?,?,?)";
+		Object[] properties = new Object[] { user.getName(), user.getAge(), user.getCell(), user.getAddress(),
+				user.getBirthday(), user.getDescription() };
+		int[] types = new int[]{java.sql.Types.VARCHAR, java.sql.Types.INTEGER, java.sql.Types.VARCHAR, java.sql.Types.VARCHAR, java.sql.Types.INTEGER, java.sql.Types.VARCHAR};
+
 		StringBuilder colunmBuilder = new StringBuilder();
 		StringBuilder paramBuilder = new StringBuilder();
 		List objList = new ArrayList();
-		
+
 		if (user.getName() != null && !"".equals(user.getName())) {
 			if (colunmBuilder.toString().length() != 0) {
 				colunmBuilder.append(',');
@@ -30,7 +31,7 @@ public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IU
 			paramBuilder.append('?');
 			objList.add(user.getName());
 		}
-		
+
 		if (user.getAge() != null) {
 			if (colunmBuilder.toString().length() != 0) {
 				colunmBuilder.append(',');
@@ -50,7 +51,7 @@ public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IU
 			paramBuilder.append('?');
 			objList.add(user.getCell());
 		}
-		
+
 		if (user.getAddress() != null && !"".equals(user.getAddress())) {
 			if (colunmBuilder.toString().length() != 0) {
 				colunmBuilder.append(',');
@@ -60,7 +61,7 @@ public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IU
 			paramBuilder.append('?');
 			objList.add(user.getAddress());
 		}
-		
+
 		if (user.getBirthday() != null && user.getBirthday() != 0) {
 			if (colunmBuilder.toString().length() != 0) {
 				colunmBuilder.append(',');
@@ -70,7 +71,7 @@ public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IU
 			paramBuilder.append('?');
 			objList.add(user.getBirthday());
 		}
-		
+
 		if (user.getDescription() != null && !"".equals(user.getDescription())) {
 			if (colunmBuilder.toString().length() != 0) {
 				colunmBuilder.append(',');
@@ -81,24 +82,26 @@ public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IU
 			objList.add(user.getDescription());
 		}
 		sql = sql + "(" + colunmBuilder.toString() + ") values (" + paramBuilder.toString() + ")";
-		
-		return save(sql, objList.toArray());
+
+		save(sql, objList.toArray());
 	}
 
-	public BaseConstant delete(long id) {
+	public void delete(long id) {
 		String sql = "delete from t_user where id = ?";
-		return delete(id, sql);
+		delete(id, sql);
 	}
 
-	public BaseConstant update(User object) {
-		return null;
+	public void update(User object) {
 	}
 
 	public User findById(long id) {
-		
+
 		return null;
 	}
 
-	
+	public User findByID(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
