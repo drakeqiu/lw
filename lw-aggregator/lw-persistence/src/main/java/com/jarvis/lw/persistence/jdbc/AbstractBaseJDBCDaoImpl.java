@@ -3,6 +3,7 @@ package com.jarvis.lw.persistence.jdbc;
 import java.util.List;
 
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.jarvis.lw.persistence.IBaseDao;
@@ -17,8 +18,8 @@ public abstract class AbstractBaseJDBCDaoImpl<T> extends JdbcDaoSupport implemen
 		getJdbcTemplate().update(sql, objects, types);
 	}
 	
-	protected final void update(String sql, Object[] objects) {
-		getJdbcTemplate().update(sql, objects);
+	protected final void update(String sql, Object[] objects, int[] types) {
+		getJdbcTemplate().update(sql, objects, types);
 	}
 	
 	protected final T findById(String sql, Object[] objects, RowMapper<T> rowMapper) {
