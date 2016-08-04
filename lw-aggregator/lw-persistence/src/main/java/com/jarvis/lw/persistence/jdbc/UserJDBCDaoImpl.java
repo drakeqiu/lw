@@ -1,13 +1,9 @@
 package com.jarvis.lw.persistence.jdbc;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.jarvis.lw.core.domain.User;
 import com.jarvis.lw.persistence.IUserDao;
 
 public class UserJDBCDaoImpl extends AbstractBaseJDBCDaoImpl<User> implements IUserDao {
-	private static final String TABLENAME = "t_user";
 
 	public void save(User user) {
 		String sql = "insert into t_user(name,age,cell,address,birthday,description) values (?,?,?,?,?,?)";
